@@ -9,9 +9,7 @@ for i in range(N):
     if asdf[1] not in nums:
         nums[asdf[1]] = 1
     else:
-        temp = nums[asdf[1]]
-        del nums[asdf[1]]
-        nums[asdf[1]] = temp+1
+        nums[asdf[1]] += 1
 
 sorted_dict = sorted(nums.items())
 
