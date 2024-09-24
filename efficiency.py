@@ -1,18 +1,12 @@
-def backtrack(path, options, result):
-    if not options:
-        result.append(path)
-        return
-    for i in range(len(options)):
-        # 다음 순열 생성을 위해 현재 숫자를 선택
-        backtrack(path + [options[i]], options[:i] + options[i+1:], result)
-
-def permute(nums):
-    result = []
-    backtrack([], nums, result)
+def mod_exp(a, b, m):
+    result = 1
+    a = a % m  # a를 m으로 나눈 나머지로 초기화
+    
+    while b > 0:
+        if b % 2 == 1:  # b가 홀수인 경우
+            result = (result * a) % m
+        b = b // 2
+        a = (a * a) % m
+    
     return result
 
-# 예시 실행: 1부터 N까지의 숫자에서 모든 순열 생성
-N = 3
-nums = list(range(1, N+1))
-all_permutations = permute(nums)
-print(all_permutations)
