@@ -1,3 +1,4 @@
+
 def mod_exp(a, b, m):
     result = 1
     a = a % m  # a를 m으로 나눈 나머지로 초기화
@@ -9,4 +10,3 @@ def mod_exp(a, b, m):
         a = (a * a) % m
     
     return result
-
