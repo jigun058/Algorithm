@@ -7,11 +7,18 @@ for _ in range(N):
     if c == 1 and T <= s:
         time.append(s-T)
         continue
+    if c == 1 and T > s:
+        continue
+    if T <= s:
+        time.append(s-T)
+        continue
+    if T > s + (c-1)*i:
+        continue
     
     num = [s + mul*i for mul in range(c)]
     first = 0
     last = c-1
-    mid = (first + last)//2
+    mid = (c-1)//2
 
     asdf = 0
 
@@ -29,3 +36,9 @@ for _ in range(N):
     
     if not asdf:
         time.append(num[last] - T)
+
+if time:
+    time.sort()
+    print(time[0])
+else:
+    print("-1")
