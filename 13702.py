@@ -26,6 +26,8 @@ for _ in range(50):
     else:
         while test(mid) == K:
             
+            first = mid
+            mid = (first + last) // 2
             
         break
 
