@@ -2,5 +2,6 @@
     "files.associations": {
         "typeinfo": "c",
         "chrono": "c"
-    }
+    },
+    "C_Cpp.errorSquiggles": "disabled"
 }
